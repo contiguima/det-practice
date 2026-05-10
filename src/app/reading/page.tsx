@@ -19,80 +19,97 @@ function LockIcon({ className }: { className?: string }) {
   );
 }
 
+const SECTIONS: Array<{
+  title: string;
+  subtitle: string;
+  href?: string;
+}> = [
+  {
+    title: "Read and Select",
+    subtitle: "Vocabulario y rapidez.",
+    href: "/reading/read-and-select",
+  },
+  {
+    title: "Fill in the Blanks",
+    subtitle: "Completa huecos en el texto.",
+    href: "/reading/fill-in-the-blanks",
+  },
+  {
+    title: "Read and Complete",
+    subtitle: "Termina fragmentos con sentido.",
+    href: "/reading/read-and-complete",
+  },
+  { title: "Interactive Reading", subtitle: "Próximamente." },
+];
+
 export default function ReadingPage() {
   return (
-    <div className="min-h-dvh p-6 sm:p-10">
-      <div className="mx-auto max-w-4xl rounded-2xl bg-[color:var(--surface)] ring-1 ring-[color:var(--border)] shadow-[var(--shadow)]">
+    <div className="min-h-dvh bg-white p-6 sm:p-10">
+      <div className="mx-auto max-w-4xl rounded-2xl border border-neutral-200 bg-white">
         <div className="flex items-start justify-between gap-4">
           <div className="px-5 py-4 sm:px-6">
-            <div className="text-lg font-semibold tracking-tight text-black/80 dark:text-white/85">
+            <div className="text-lg font-semibold tracking-tight text-neutral-900">
               Reading
             </div>
-            <div className="mt-1 text-sm text-black/45 dark:text-white/55">
+            <div className="mt-1 text-sm text-neutral-600">
               Elegí un tipo de práctica.
             </div>
           </div>
           <Link
             href="/"
-            className="m-4 rounded-xl bg-[color:var(--surface-muted)] px-4 py-2 text-sm font-semibold text-black/60 ring-1 ring-[color:var(--border)] transition hover:bg-[color:var(--surface)] dark:text-white/70"
+            className="m-4 rounded-xl border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-800 transition hover:bg-neutral-50"
           >
             Volver
           </Link>
         </div>
 
-        <div className="border-t border-[color:var(--border)] p-5 sm:p-6">
+        <div className="border-t border-neutral-200 p-5 sm:p-6">
           <div className="grid gap-4 sm:grid-cols-2">
-            <Link
-              href="/reading/read-and-select"
-              className="group rounded-2xl bg-[color:var(--surface)] ring-1 ring-[color:var(--border)] p-4 transition hover:-translate-y-0.5 hover:shadow-[var(--shadow)] focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)]/30"
-            >
-              <div className="flex items-center justify-between">
-                <div className="text-sm font-semibold text-black/80 dark:text-white/85">
-                  Read and Select
-                </div>
-                <div className="text-[11px] font-semibold text-[color:var(--brand)]">
-                  Disponible
-                </div>
-              </div>
-              <div className="mt-2 text-xs text-black/45 dark:text-white/55">
-                Vocabulario y rapidez.
-              </div>
-              <div className="mt-4 h-1.5 w-full rounded-full bg-black/5 dark:bg-white/10">
-                <div className="h-1.5 w-[6%] rounded-full bg-[color:var(--brand)]" />
-              </div>
-            </Link>
-
-            {[
-              "Fill in the Blanks",
-              "Read and Complete",
-              "Interactive Reading",
-            ].map((title) => (
-              <button
-                key={title}
-                type="button"
-                disabled
-                aria-disabled="true"
-                className="rounded-2xl bg-[color:var(--surface)] ring-1 ring-[color:var(--border)] p-4 opacity-70 text-left"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="text-sm font-semibold text-black/80 dark:text-white/85">
-                    {title}
+            {SECTIONS.map((section) =>
+              section.href ? (
+                <Link
+                  key={section.title}
+                  href={section.href}
+                  className="group rounded-2xl border border-neutral-200 bg-white p-4 transition hover:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)]/25"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm font-semibold text-neutral-900">
+                      {section.title}
+                    </div>
+                    <div className="text-[11px] font-semibold text-[color:var(--brand)]">
+                      Disponible
+                    </div>
                   </div>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-black/5 px-2.5 py-1 text-[11px] font-semibold text-black/55 dark:bg-white/10 dark:text-white/60">
-                    <LockIcon className="h-3.5 w-3.5" />
-                    Bloqueado
-                  </span>
-                </div>
-                <div className="mt-2 text-xs text-black/45 dark:text-white/55">
-                  Próximamente
-                </div>
-                <div className="mt-4 h-1.5 w-full rounded-full bg-black/5 dark:bg-white/10" />
-              </button>
-            ))}
+                  <div className="mt-2 text-xs text-neutral-600">{section.subtitle}</div>
+                  <div className="mt-4 h-1.5 w-full rounded-full bg-neutral-100">
+                    <div className="h-1.5 w-[6%] rounded-full bg-[color:var(--brand)]" />
+                  </div>
+                </Link>
+              ) : (
+                <button
+                  key={section.title}
+                  type="button"
+                  disabled
+                  aria-disabled="true"
+                  className="rounded-2xl border border-neutral-200 bg-white p-4 text-left opacity-60"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm font-semibold text-neutral-900">
+                      {section.title}
+                    </div>
+                    <span className="inline-flex items-center gap-1 rounded-full bg-neutral-100 px-2.5 py-1 text-[11px] font-semibold text-neutral-700">
+                      <LockIcon className="h-3.5 w-3.5" />
+                      Bloqueado
+                    </span>
+                  </div>
+                  <div className="mt-2 text-xs text-neutral-600">{section.subtitle}</div>
+                  <div className="mt-4 h-1.5 w-full rounded-full bg-neutral-100" />
+                </button>
+              ),
+            )}
           </div>
         </div>
       </div>
     </div>
   );
 }
-

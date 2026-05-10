@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
+/* Solo tema claro: evita dark:text-* con prefers-color-scheme sobre fondo blanco */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #f5f7fb;
+  --background: #ffffff;
   --foreground: #101827;
   --surface: #ffffff;
-  --surface-muted: #f7f9fc;
+  --surface-muted: #ffffff;
   --border: rgba(16, 24, 39, 0.10);
-  --shadow: 0 10px 26px rgba(16, 24, 39, 0.08);
+  --shadow: 0 1px 3px rgba(16, 24, 39, 0.06);
   --brand: #1d9bf0;
   --brand-2: #7cc9ff;
 }
@@ -20,15 +23,20 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b1020;
-    --foreground: #eaf0ff;
-    --surface: #0f1730;
-    --surface-muted: #0c142b;
-    --border: rgba(234, 240, 255, 0.12);
-    --shadow: 0 18px 52px rgba(0, 0, 0, 0.45);
-    --brand: #64b5ff;
-    --brand-2: #2aa8ff;
+    /* Misma estética blanca; texto oscuro para legibilidad */
+    --background: #ffffff;
+    --foreground: #101827;
+    --surface: #ffffff;
+    --surface-muted: #ffffff;
+    --border: rgba(16, 24, 39, 0.10);
+    --shadow: 0 1px 3px rgba(16, 24, 39, 0.06);
+    --brand: #1d9bf0;
+    --brand-2: #7cc9ff;
   }
+}
+
+html {
+  color-scheme: light;
 }
 
 html,
@@ -37,10 +45,11 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: #0a0a0a;
   font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", sans-serif;
-  background: var(--background);
+  background: #ffffff;
+  background-color: var(--background);
 }
 
 /* (intencionalmente minimal: sin texturas) */

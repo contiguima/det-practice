@@ -25,9 +25,11 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${fontBody.variable} ${fontMono.variable} h-full antialiased`}
+      className={`${fontBody.variable} ${fontMono.variable} h-full antialiased bg-white text-neutral-950`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-white text-neutral-950">
+        {children}
+      </body>
     </html>
   );
 }
