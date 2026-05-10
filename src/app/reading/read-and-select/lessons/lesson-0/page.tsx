@@ -1,7 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { GrammarHints } from "@/components/read-and-select/GrammarHints";
+import { SavedWritingBlock } from "@/components/read-and-select/SavedWritingBlock";
+import { loadPracticeJson, savePracticeJson } from "@/lib/readAndSelectPracticeStorage";
 
 type Drill = { id: string; situation: string; expected: string };
 
@@ -315,11 +318,48 @@ function Pill({
 
 const DRILL_TERMS_LIST = [...DRILL_TERMS];
 
+type Lesson0Stored = {
+  typedAnswers: Record<string, string>;
+  situationAnswers: Record<string, string>;
+  drill: string;
+  drillCollapsed: boolean;
+};
+
+const LESSON_0_KEY = "lesson-0";
+
 export default function Lesson0Page() {
   const [tab, setTab] = useState<"learn" | "practice">("learn");
   const [situationAnswers, setSituationAnswers] = useState<Record<string, string>>({});
   const [typedAnswers, setTypedAnswers] = useState<Record<string, string>>({});
   const [drill, setDrill] = useState("");
+  const [drillCollapsed, setDrillCollapsed] = useState(false);
+  const [practiceHydrated, setPracticeHydrated] = useState(false);
+
+  useEffect(() => {
+    const p = loadPracticeJson<Partial<Lesson0Stored>>(LESSON_0_KEY);
+    if (p) {
+      if (p.typedAnswers && typeof p.typedAnswers === "object") setTypedAnswers(p.typedAnswers);
+      if (p.situationAnswers && typeof p.situationAnswers === "object")
+        setSituationAnswers(p.situationAnswers);
+      if (typeof p.drill === "string") setDrill(p.drill);
+      if (typeof p.drillCollapsed === "boolean") {
+        const hasDrill = typeof p.drill === "string" && p.drill.trim().length > 0;
+        setDrillCollapsed(hasDrill && p.drillCollapsed);
+      }
+    }
+    setPracticeHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!practiceHydrated) return;
+    const payload: Lesson0Stored = {
+      typedAnswers,
+      situationAnswers,
+      drill,
+      drillCollapsed,
+    };
+    savePracticeJson(LESSON_0_KEY, payload);
+  }, [practiceHydrated, typedAnswers, situationAnswers, drill, drillCollapsed]);
 
   const situationStatus = useMemo(() => {
     return SITUATION_DRILLS.reduce<Record<string, "neutral" | "ok" | "bad">>((acc, d) => {
@@ -582,11 +622,12 @@ export default function Lesson0Page() {
                   ))}
                 </div>
 
-                <textarea
+                <SavedWritingBlock
                   value={drill}
-                  onChange={(e) => setDrill(e.target.value)}
+                  onChange={setDrill}
+                  collapsed={drillCollapsed}
+                  onCollapsedChange={setDrillCollapsed}
                   rows={7}
-                  className="mt-4 w-full rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)]/25"
                   placeholder="Example: Maybe I'm not available at 5, but I need to leave anyway..."
                 />
 
@@ -670,8 +711,18 @@ export default function Lesson0Page() {
                           }))
                         }
                         placeholder="Type the sentence…"
+                        spellCheck
+                        lang="en"
                         className="mt-3 w-full rounded-xl border border-neutral-200 bg-white px-3 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)]/25"
                       />
+                      {v.trim().length >= 55 ? (
+                        <GrammarHints
+                          text={v}
+                          onChangeText={(next) =>
+                            setSituationAnswers((prev) => ({ ...prev, [d.id]: next }))
+                          }
+                        />
+                      ) : null}
 
                       <div className="mt-3 text-sm text-neutral-700">
                         <span className="font-semibold text-neutral-900">Target:</span>{" "}

@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { SavedWritingBlock } from "@/components/read-and-select/SavedWritingBlock";
+import { loadPracticeJson, savePracticeJson } from "@/lib/readAndSelectPracticeStorage";
 
 type Term = {
   term: string;
@@ -195,6 +197,14 @@ function splitSentences(text: string) {
     .filter(Boolean);
 }
 
+type Lesson1Stored = {
+  typedAnswers: Record<string, string>;
+  drill: string;
+  drillCollapsed: boolean;
+};
+
+const LESSON_1_KEY = "lesson-1";
+
 export default function Lesson1Page() {
   const [tab, setTab] = useState<"learn" | "practice">("learn");
   const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
@@ -206,6 +216,30 @@ export default function Lesson1Page() {
 
   const [typedAnswers, setTypedAnswers] = useState<Record<string, string>>({});
   const [drill, setDrill] = useState<string>("");
+  const [drillCollapsed, setDrillCollapsed] = useState(false);
+  const [practiceHydrated, setPracticeHydrated] = useState(false);
+
+  useEffect(() => {
+    const p = loadPracticeJson<Partial<Lesson1Stored>>(LESSON_1_KEY);
+    if (p) {
+      if (p.typedAnswers && typeof p.typedAnswers === "object") setTypedAnswers(p.typedAnswers);
+      if (typeof p.drill === "string") setDrill(p.drill);
+      if (typeof p.drillCollapsed === "boolean") {
+        const hasDrill = typeof p.drill === "string" && p.drill.trim().length > 0;
+        setDrillCollapsed(hasDrill && p.drillCollapsed);
+      }
+    }
+    setPracticeHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!practiceHydrated) return;
+    savePracticeJson(LESSON_1_KEY, {
+      typedAnswers,
+      drill,
+      drillCollapsed,
+    } satisfies Lesson1Stored);
+  }, [practiceHydrated, typedAnswers, drill, drillCollapsed]);
 
   const drillFeedback = useMemo(() => {
     const sentences = splitSentences(drill);
@@ -422,11 +456,12 @@ export default function Lesson1Page() {
                   ))}
                 </div>
 
-                <textarea
+                <SavedWritingBlock
                   value={drill}
-                  onChange={(e) => setDrill(e.target.value)}
+                  onChange={setDrill}
+                  collapsed={drillCollapsed}
+                  onCollapsedChange={setDrillCollapsed}
                   rows={7}
-                  className="mt-4 w-full rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)]/25"
                   placeholder="Example: We leveraged stakeholder input to streamline the implementation..."
                 />
 

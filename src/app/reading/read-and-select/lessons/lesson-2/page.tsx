@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { SavedWritingBlock } from "@/components/read-and-select/SavedWritingBlock";
+import { loadPracticeJson, savePracticeJson } from "@/lib/readAndSelectPracticeStorage";
 
 type Term = {
   term: string;
@@ -133,6 +135,14 @@ const LESSON_2: {
 
 type Answer = "yes" | "no";
 
+type Lesson2Stored = {
+  simIndex: number;
+  writing: string;
+  writingCollapsed: boolean;
+};
+
+const LESSON_2_KEY = "lesson-2";
+
 function Pill({
   children,
   tone,
@@ -197,6 +207,33 @@ export default function Lesson2Page() {
 
   // Practice: Writing check (mass balance)
   const [writing, setWriting] = useState("");
+  const [writingCollapsed, setWritingCollapsed] = useState(false);
+  const [practiceHydrated, setPracticeHydrated] = useState(false);
+
+  useEffect(() => {
+    const p = loadPracticeJson<Partial<Lesson2Stored>>(LESSON_2_KEY);
+    if (p) {
+      if (typeof p.simIndex === "number" && p.simIndex >= 0 && p.simIndex < LESSON_2.simulator.length) {
+        setSimIndex(p.simIndex);
+      }
+      if (typeof p.writing === "string") setWriting(p.writing);
+      if (typeof p.writingCollapsed === "boolean") {
+        const has = typeof p.writing === "string" && p.writing.trim().length > 0;
+        setWritingCollapsed(has && p.writingCollapsed);
+      }
+    }
+    setPracticeHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!practiceHydrated) return;
+    savePracticeJson(LESSON_2_KEY, {
+      simIndex,
+      writing,
+      writingCollapsed,
+    } satisfies Lesson2Stored);
+  }, [practiceHydrated, simIndex, writing, writingCollapsed]);
+
   const writingFeedback = useMemo(() => {
     const terms = LESSON_2.terms.map((t) => t.term);
     const used = terms.filter((term) => new RegExp(`\\b${term}\\b`, "i").test(writing));
@@ -422,11 +459,12 @@ export default function Lesson2Page() {
                   ))}
                 </div>
 
-                <textarea
+                <SavedWritingBlock
                   value={writing}
-                  onChange={(e) => setWriting(e.target.value)}
+                  onChange={setWriting}
+                  collapsed={writingCollapsed}
+                  onCollapsedChange={setWritingCollapsed}
                   rows={8}
-                  className="mt-4 w-full rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)]/25"
                   placeholder="Example: In this assessment, the variables are mass in and mass out..."
                 />
 
