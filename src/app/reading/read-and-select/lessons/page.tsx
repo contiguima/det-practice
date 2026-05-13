@@ -121,24 +121,28 @@ export default function LessonsPage() {
               subtitle="The Engineer's Voice · 10 verbs"
             />
             <LessonCard
-              enabled={false}
+              enabled
+              href="/reading/read-and-select/lessons/lesson-3"
               title="Lesson 3 · Technology & Innovation"
-              subtitle="The Product Builder · Coming soon"
+              subtitle="The Product Builder · Digital studios & emerging tech"
             />
             <LessonCard
-              enabled={false}
+              enabled
+              href="/reading/read-and-select/lessons/lesson-4"
               title="Lesson 4 · Abstract Concepts & Qualities"
-              subtitle="B2 Precision · Coming soon"
+              subtitle="B2 Precision · Beyond good and bad"
             />
             <LessonCard
-              enabled={false}
+              enabled
+              href="/reading/read-and-select/lessons/lesson-5"
               title="Lesson 5 · Transition & Connection"
-              subtitle="Logic & Flow · Coming soon"
+              subtitle="Logic & Flow · Connectors"
             />
             <LessonCard
-              enabled={false}
-              title="Lesson 6 · Idioms & Collocations"
-              subtitle="Coming soon"
+              enabled
+              href="/reading/read-and-select/lessons/lesson-6"
+              title="Lesson 6 · Idiomatic Expressions & Collocations"
+              subtitle="Natural partnerships · Capstone writing"
             />
           </div>
         </div>
