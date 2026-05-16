@@ -1,4 +1,5 @@
-import Link from "next/link";
+﻿import Link from "next/link";
+import { AppShell } from "@/components/home/AppShell";
 
 function LockIcon({ className }: { className?: string }) {
   return (
@@ -133,7 +134,7 @@ const skills: Array<{
   {
     key: "reading",
     title: "Reading",
-    subtitle: "Read and Select · Read and Complete",
+    subtitle: "Read and Select Â· Read and Complete",
     enabled: true,
     href: "/reading",
     icon: (p) => <BookIcon {...p} />,
@@ -142,7 +143,7 @@ const skills: Array<{
   {
     key: "writing",
     title: "Writing",
-    subtitle: "Write About the Photo · Writing Sample",
+    subtitle: "Write About the Photo Â· Writing Sample",
     enabled: false,
     icon: (p) => <PenIcon {...p} />,
     accent: "blue",
@@ -150,7 +151,7 @@ const skills: Array<{
   {
     key: "speaking",
     title: "Speaking",
-    subtitle: "Speak About the Photo · Speaking Sample",
+    subtitle: "Speak About the Photo Â· Speaking Sample",
     enabled: false,
     icon: (p) => <MicIcon {...p} />,
     accent: "blue",
@@ -158,7 +159,7 @@ const skills: Array<{
   {
     key: "listening",
     title: "Listening",
-    subtitle: "Listen and Type · Interactive Listening",
+    subtitle: "Listen and Type Â· Interactive Listening",
     enabled: false,
     icon: (p) => <HeadphonesIcon {...p} />,
     accent: "blue",
@@ -173,41 +174,7 @@ const accent = {
 
 export default function Home() {
   return (
-    <div className="flex min-h-dvh w-full bg-white">
-      <aside className="hidden md:flex w-[250px] shrink-0 flex-col border-r border-neutral-200 bg-white">
-        <div className="p-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="grid h-9 w-9 place-items-center rounded-xl border border-neutral-200 bg-white text-[color:var(--brand)]">
-                <span className="text-xs font-bold tracking-wide">DET</span>
-              </div>
-              <div className="leading-tight">
-                <div className="text-sm font-semibold text-neutral-900">
-                  Duolingo English Test
-                </div>
-                <div className="text-xs text-neutral-600">
-                  Práctica
-                </div>
-              </div>
-            </div>
-            <div className="h-9 w-9 rounded-xl bg-white ring-1 ring-neutral-200 grid place-items-center text-xs font-semibold text-neutral-700">
-              A
-            </div>
-          </div>
-        </div>
-
-        <div className="px-4">
-          <button
-            type="button"
-            className="flex w-full items-center rounded-xl border border-neutral-200 bg-white px-3 py-2.5 text-sm font-semibold text-neutral-900"
-          >
-            Practicar
-          </button>
-        </div>
-      </aside>
-
-      <main className="flex-1 bg-white">
-        <div className="mx-auto flex min-h-dvh max-w-5xl flex-col px-5 py-6 sm:px-8 sm:py-10">
+    <AppShell>
           <header className="flex items-center justify-between gap-4">
             <div className="md:hidden flex items-center gap-3">
               <div className="grid h-9 w-9 place-items-center rounded-xl border border-neutral-200 bg-white text-[color:var(--brand)]">
@@ -341,8 +308,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-        </div>
-      </main>
-    </div>
+    </AppShell>
   );
 }
