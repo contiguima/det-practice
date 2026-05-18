@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import { AppShell } from "@/components/home/AppShell";
+import { PracticeHomeDashboard } from "@/components/home/PracticeHomeDashboard";
 
 function LockIcon({ className }: { className?: string }) {
   return (
@@ -134,7 +135,7 @@ const skills: Array<{
   {
     key: "reading",
     title: "Reading",
-    subtitle: "Read and Select Â· Read and Complete",
+    subtitle: "Read and Select · Read and Complete",
     enabled: true,
     href: "/reading",
     icon: (p) => <BookIcon {...p} />,
@@ -143,7 +144,7 @@ const skills: Array<{
   {
     key: "writing",
     title: "Writing",
-    subtitle: "Write About the Photo Â· Writing Sample",
+    subtitle: "Write About the Photo · Writing Sample",
     enabled: false,
     icon: (p) => <PenIcon {...p} />,
     accent: "blue",
@@ -151,7 +152,7 @@ const skills: Array<{
   {
     key: "speaking",
     title: "Speaking",
-    subtitle: "Speak About the Photo Â· Speaking Sample",
+    subtitle: "Speak About the Photo · Speaking Sample",
     enabled: false,
     icon: (p) => <MicIcon {...p} />,
     accent: "blue",
@@ -159,7 +160,7 @@ const skills: Array<{
   {
     key: "listening",
     title: "Listening",
-    subtitle: "Listen and Type Â· Interactive Listening",
+    subtitle: "Listen and Type · Interactive Listening",
     enabled: false,
     icon: (p) => <HeadphonesIcon {...p} />,
     accent: "blue",
@@ -186,11 +187,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden md:block">
-              <div className="text-xl font-semibold tracking-tight text-neutral-900">
-                Práctica de habilidades
-              </div>
-            </div>
+            <div className="hidden flex-1 md:block" aria-hidden />
 
             <div className="flex items-center gap-2">
               <button
@@ -203,35 +200,12 @@ export default function Home() {
             </div>
           </header>
 
-          <section className="mt-6">
-            <div className="mx-auto w-full max-w-4xl">
-              <div className="rounded-2xl border border-neutral-200 bg-white">
-                <div className="border-b border-neutral-200 px-5 py-4 sm:px-6">
-                  <div className="text-base font-semibold text-neutral-900">
-                    Práctica de habilidades
-                  </div>
-                  <div className="mt-3 flex flex-wrap gap-3 text-[11px] font-semibold tracking-wide text-neutral-500">
-                    {["TODAS", "SPEAKING", "WRITING", "READING", "LISTENING"].map(
-                      (t) => (
-                        <span
-                          key={t}
-                          className={
-                            t === "TODAS"
-                              ? "relative text-[color:var(--brand)]"
-                              : ""
-                          }
-                        >
-                          {t}
-                          {t === "TODAS" ? (
-                            <span className="absolute -bottom-2 left-0 h-0.5 w-full bg-[color:var(--brand)]" />
-                          ) : null}
-                        </span>
-                      ),
-                    )}
-                  </div>
-                </div>
+          <PracticeHomeDashboard />
 
-                <div className="grid grid-cols-1 gap-4 p-5 sm:grid-cols-2 sm:gap-5 sm:p-6">
+          <section className="mt-2">
+            <div className="mx-auto w-full max-w-4xl">
+              <div className="rounded-2xl border border-neutral-200 bg-white p-5 sm:p-6">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
                   {skills.map((skill) => {
                     const CardInner = (
                       <div

@@ -1,0 +1,972 @@
+{
+  "exercises": [
+    {
+      "id": "w-1",
+      "kind": "word",
+      "level": "B1",
+      "word": "adopt",
+      "definition": "To officially accept or start using something new.",
+      "explanation": "The company is choosing a policy employees will follow from now on.",
+      "examples": [
+        "The company is choosing a policy employees will follow from now on.",
+        "Try using \"adopt\" in a sentence about work, study, or daily life.",
+        "Quick check: \"adopt\" means to officially accept or start using something new."
+      ],
+      "prompt": "The company decided to a_ _ _ _ the new policy to improve employee satisfaction.",
+      "answer": "adopt"
+    },
+    {
+      "id": "w-2",
+      "kind": "word",
+      "level": "B1",
+      "word": "went",
+      "definition": "Past tense of go; moved to a place.",
+      "explanation": "They chose to take a walk despite bad weather.",
+      "examples": [
+        "They chose to take a walk despite bad weather.",
+        "Try using \"went\" in a sentence about work, study, or daily life.",
+        "Quick check: \"went\" means past tense of go; moved to a place."
+      ],
+      "prompt": "Even though it was raining they w_ _ _ for a walk in the park.",
+      "answer": "went"
+    },
+    {
+      "id": "w-3",
+      "kind": "word",
+      "level": "B1",
+      "word": "unique",
+      "definition": "Being the only one of its kind; unlike anything else.",
+      "explanation": "The style cannot be copied easily by others.",
+      "examples": [
+        "The style cannot be copied easily by others.",
+        "Try using \"unique\" in a sentence about work, study, or daily life.",
+        "Quick check: \"unique\" means being the only one of its kind; unlike anything else."
+      ],
+      "prompt": "She has a very u_ _ _ _ _ style of painting that no one can replicate.",
+      "answer": "unique"
+    },
+    {
+      "id": "w-4",
+      "kind": "word",
+      "level": "B1",
+      "word": "focus",
+      "definition": "To concentrate attention or effort on one thing.",
+      "explanation": "Success requires clear priorities and hard work.",
+      "examples": [
+        "Success requires clear priorities and hard work.",
+        "Try using \"focus\" in a sentence about work, study, or daily life.",
+        "Quick check: \"focus\" means to concentrate attention or effort on one thing."
+      ],
+      "prompt": "If you want to succeed you must f_ _ _ _ on your goals and work hard.",
+      "answer": "focus"
+    },
+    {
+      "id": "w-5",
+      "kind": "word",
+      "level": "B1",
+      "word": "process",
+      "definition": "A series of actions taken to achieve a result.",
+      "explanation": "The scientist explains how the reaction works step by step.",
+      "examples": [
+        "The scientist explains how the reaction works step by step.",
+        "Try using \"process\" in a sentence about work, study, or daily life.",
+        "Quick check: \"process\" means a series of actions taken to achieve a result."
+      ],
+      "prompt": "The scientist explained the p_ _ _ _ _ _ behind the chemical reaction.",
+      "answer": "process"
+    },
+    {
+      "id": "r-1",
+      "kind": "review",
+      "level": "B1",
+      "title": "Review · Words 1–5",
+      "relatedWords": [
+        "adopt",
+        "went",
+        "unique",
+        "focus",
+        "process"
+      ],
+      "paragraphs": [
+        "Last month our team voted to a_ _ _ _ a shorter feedback cycle so managers could hear concerns earlier. Even when the office was closed, a few colleagues still w_ _ _ to the co-working space to finish their presentations.",
+        "The designer’s u_ _ _ _ _ use of color made the report easy to remember. To f_ _ _ _ on quality, we paused new features and documented the p_ _ _ _ _ _ we used for testing each release."
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "answer": "adopt",
+          "explanation": "Use \"adopt\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b1",
+          "answer": "went",
+          "explanation": "Use \"went\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b2",
+          "answer": "unique",
+          "explanation": "Use \"unique\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b3",
+          "answer": "focus",
+          "explanation": "Use \"focus\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b4",
+          "answer": "process",
+          "explanation": "Use \"process\" — it matches the grammar and meaning of this sentence."
+        }
+      ],
+      "timerSeconds": 90,
+      "explanation": "This review combines policy adoption, movement, distinctive style, concentration, and a step-by-step method."
+    },
+    {
+      "id": "w-6",
+      "kind": "word",
+      "level": "B1",
+      "word": "because",
+      "definition": "For the reason that; since.",
+      "explanation": "Trains are preferred for environmental reasons.",
+      "examples": [
+        "Trains are preferred for environmental reasons.",
+        "Try using \"because\" in a sentence about work, study, or daily life.",
+        "Quick check: \"because\" means for the reason that; since."
+      ],
+      "prompt": "Most people prefer to travel by train b_ _ _ _ _ _ it is more environmentally friendly.",
+      "answer": "because"
+    },
+    {
+      "id": "w-7",
+      "kind": "word",
+      "level": "B1",
+      "word": "detailed",
+      "definition": "Including many specific facts or aspects.",
+      "explanation": "The manager wants depth, not a short summary.",
+      "examples": [
+        "The manager wants depth, not a short summary.",
+        "Try using \"detailed\" in a sentence about work, study, or daily life.",
+        "Quick check: \"detailed\" means including many specific facts or aspects."
+      ],
+      "prompt": "The manager asked for a d_ _ _ _ _ _ report on the project's progress.",
+      "answer": "detailed"
+    },
+    {
+      "id": "w-8",
+      "kind": "word",
+      "level": "B1",
+      "word": "engrossed",
+      "definition": "Completely absorbed and focused on something.",
+      "explanation": "He was so focused he did not notice the doorbell.",
+      "examples": [
+        "He was so focused he did not notice the doorbell.",
+        "Try using \"engrossed\" in a sentence about work, study, or daily life.",
+        "Quick check: \"engrossed\" means completely absorbed and focused on something."
+      ],
+      "prompt": "He was so e_ _ _ _ _ _ _ in his book that he didn't hear the doorbell.",
+      "answer": "engrossed"
+    },
+    {
+      "id": "w-9",
+      "kind": "word",
+      "level": "B1",
+      "word": "demand",
+      "definition": "A strong desire or need for a product.",
+      "explanation": "High demand made the phones sell out quickly.",
+      "examples": [
+        "High demand made the phones sell out quickly.",
+        "Try using \"demand\" in a sentence about work, study, or daily life.",
+        "Quick check: \"demand\" means a strong desire or need for a product."
+      ],
+      "prompt": "Due to the high d_ _ _ _ _ the store ran out of the new smartphones in an hour.",
+      "answer": "demand"
+    },
+    {
+      "id": "w-10",
+      "kind": "word",
+      "level": "B1",
+      "word": "solution",
+      "definition": "An answer to a problem.",
+      "explanation": "They must solve the issue before the deadline.",
+      "examples": [
+        "They must solve the issue before the deadline.",
+        "Try using \"solution\" in a sentence about work, study, or daily life.",
+        "Quick check: \"solution\" means an answer to a problem."
+      ],
+      "prompt": "We need to find a s_ _ _ _ _ _ _ to this problem before the deadline.",
+      "answer": "solution"
+    },
+    {
+      "id": "r-2",
+      "kind": "review",
+      "level": "B1",
+      "title": "Review · Words 6–10",
+      "relatedWords": [
+        "because",
+        "detailed",
+        "engrossed",
+        "demand",
+        "solution"
+      ],
+      "paragraphs": [
+        "Commuters prefer the train b_ _ _ _ _ _ it produces fewer emissions per trip. The analyst wrote a d_ _ _ _ _ _ summary that listed costs, risks, and next steps for the board.",
+        "He was so e_ _ _ _ _ _ _ in the manuscript that he missed two messages. After demand surged online, the team proposed a practical s_ _ _ _ _ _ _ that could ship within two weeks."
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "answer": "because",
+          "explanation": "Use \"because\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b1",
+          "answer": "detailed",
+          "explanation": "Use \"detailed\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b2",
+          "answer": "engrossed",
+          "explanation": "Use \"engrossed\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b3",
+          "answer": "demand",
+          "explanation": "Use \"demand\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b4",
+          "answer": "solution",
+          "explanation": "Use \"solution\" — it matches the grammar and meaning of this sentence."
+        }
+      ],
+      "timerSeconds": 90,
+      "explanation": "Connectors, precision, focus, market pressure, and problem-solving appear in realistic workplace contexts."
+    },
+    {
+      "id": "w-11",
+      "kind": "word",
+      "level": "B1",
+      "word": "says",
+      "definition": "States something; third-person form of say.",
+      "explanation": "The forecast gives tomorrow's weather.",
+      "examples": [
+        "The forecast gives tomorrow's weather.",
+        "Try using \"says\" in a sentence about work, study, or daily life.",
+        "Quick check: \"says\" means states something; third-person form of say."
+      ],
+      "prompt": "The weather forecast s_ _ _ that it will be sunny tomorrow afternoon.",
+      "answer": "says"
+    },
+    {
+      "id": "w-12",
+      "kind": "word",
+      "level": "B1",
+      "word": "respond",
+      "definition": "To reply or react to a message.",
+      "explanation": "They want a quick reply to the email.",
+      "examples": [
+        "They want a quick reply to the email.",
+        "Try using \"respond\" in a sentence about work, study, or daily life.",
+        "Quick check: \"respond\" means to reply or react to a message."
+      ],
+      "prompt": "Please r_ _ _ _ _ _ to the email as soon as you have the information.",
+      "answer": "respond"
+    },
+    {
+      "id": "w-13",
+      "kind": "word",
+      "level": "B1",
+      "word": "language",
+      "definition": "A system of communication used by people.",
+      "explanation": "Learning it can improve career options.",
+      "examples": [
+        "Learning it can improve career options.",
+        "Try using \"language\" in a sentence about work, study, or daily life.",
+        "Quick check: \"language\" means a system of communication used by people."
+      ],
+      "prompt": "Learning a new l_ _ _ _ _ _ _ can open up many career opportunities.",
+      "answer": "language"
+    },
+    {
+      "id": "w-14",
+      "kind": "word",
+      "level": "B1",
+      "word": "postpone",
+      "definition": "To delay an event to a later time.",
+      "explanation": "The meeting will happen next week instead.",
+      "examples": [
+        "The meeting will happen next week instead.",
+        "Try using \"postpone\" in a sentence about work, study, or daily life.",
+        "Quick check: \"postpone\" means to delay an event to a later time."
+      ],
+      "prompt": "They decided to p_ _ _ _ _ _ the meeting until next Wednesday.",
+      "answer": "postpone"
+    },
+    {
+      "id": "w-15",
+      "kind": "word",
+      "level": "B1",
+      "word": "amazing",
+      "definition": "Causing great surprise or admiration.",
+      "explanation": "The audience reacted with strong applause.",
+      "examples": [
+        "The audience reacted with strong applause.",
+        "Try using \"amazing\" in a sentence about work, study, or daily life.",
+        "Quick check: \"amazing\" means causing great surprise or admiration."
+      ],
+      "prompt": "Her performance was a_ _ _ _ _ _ and everyone in the audience cheered.",
+      "answer": "amazing"
+    },
+    {
+      "id": "r-3",
+      "kind": "review",
+      "level": "B1",
+      "title": "Review · Words 11–15",
+      "relatedWords": [
+        "says",
+        "respond",
+        "language",
+        "postpone",
+        "amazing"
+      ],
+      "paragraphs": [
+        "The coordinator s_ _ _ the kickoff will begin at nine, so please r_ _ _ _ _ _ before Friday if you need accommodations. Studying a second l_ _ _ _ _ _ _ helped her interview with confidence.",
+        "They had to p_ _ _ _ _ _ the workshop because the speaker was ill, but the rehearsal still looked a_ _ _ _ _ _ and motivated the whole class."
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "answer": "says",
+          "explanation": "Use \"says\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b1",
+          "answer": "respond",
+          "explanation": "Use \"respond\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b2",
+          "answer": "language",
+          "explanation": "Use \"language\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b3",
+          "answer": "postpone",
+          "explanation": "Use \"postpone\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b4",
+          "answer": "amazing",
+          "explanation": "Use \"amazing\" — it matches the grammar and meaning of this sentence."
+        }
+      ],
+      "timerSeconds": 90,
+      "explanation": "Communication verbs and time management vocabulary are practiced in event-planning scenarios."
+    },
+    {
+      "id": "w-16",
+      "kind": "word",
+      "level": "B1",
+      "word": "located",
+      "definition": "Situated in a particular place.",
+      "explanation": "The museum is in the city center.",
+      "examples": [
+        "The museum is in the city center.",
+        "Try using \"located\" in a sentence about work, study, or daily life.",
+        "Quick check: \"located\" means situated in a particular place."
+      ],
+      "prompt": "The museum is l_ _ _ _ _ _ in the heart of the city center.",
+      "answer": "located"
+    },
+    {
+      "id": "w-17",
+      "kind": "word",
+      "level": "B1",
+      "word": "forward",
+      "definition": "Toward the front; in look forward to, to anticipate.",
+      "explanation": "He is excited about the upcoming conference.",
+      "examples": [
+        "He is excited about the upcoming conference.",
+        "Try using \"forward\" in a sentence about work, study, or daily life.",
+        "Quick check: \"forward\" means toward the front; in look forward to, to anticipate."
+      ],
+      "prompt": "I am looking f_ _ _ _ _ _ to seeing you at the conference.",
+      "answer": "forward"
+    },
+    {
+      "id": "w-18",
+      "kind": "word",
+      "level": "B1",
+      "word": "increased",
+      "definition": "Became greater in amount or degree.",
+      "explanation": "Ticket prices are higher than last year.",
+      "examples": [
+        "Ticket prices are higher than last year.",
+        "Try using \"increased\" in a sentence about work, study, or daily life.",
+        "Quick check: \"increased\" means became greater in amount or degree."
+      ],
+      "prompt": "The price of the tickets i_ _ _ _ _ _ _ compared to last year.",
+      "answer": "increased"
+    },
+    {
+      "id": "w-19",
+      "kind": "word",
+      "level": "B1",
+      "word": "late",
+      "definition": "After the expected or usual time.",
+      "explanation": "He apologized for not arriving on time.",
+      "examples": [
+        "He apologized for not arriving on time.",
+        "Try using \"late\" in a sentence about work, study, or daily life.",
+        "Quick check: \"late\" means after the expected or usual time."
+      ],
+      "prompt": "He apologized for being l_ _ _ to the appointment this morning.",
+      "answer": "late"
+    },
+    {
+      "id": "w-20",
+      "kind": "word",
+      "level": "B1",
+      "word": "passionate",
+      "definition": "Having or showing strong enthusiasm.",
+      "explanation": "She cares deeply and always tries her best.",
+      "examples": [
+        "She cares deeply and always tries her best.",
+        "Try using \"passionate\" in a sentence about work, study, or daily life.",
+        "Quick check: \"passionate\" means having or showing strong enthusiasm."
+      ],
+      "prompt": "She is very p_ _ _ _ _ _ _ about her work and always does her best.",
+      "answer": "passionate"
+    },
+    {
+      "id": "r-4",
+      "kind": "review",
+      "level": "B1",
+      "title": "Review · Words 16–20",
+      "relatedWords": [
+        "located",
+        "forward",
+        "increased",
+        "late",
+        "passionate"
+      ],
+      "paragraphs": [
+        "The gallery is l_ _ _ _ _ _ near the river, and visitors are looking f_ _ _ _ _ _ to the new exhibit. Ticket prices have i_ _ _ _ _ _ _ slightly, yet attendance remains strong.",
+        "He was ten minutes l_ _ _ because of traffic, but his speech was so p_ _ _ _ _ _ _ _ that the audience stayed engaged until the end."
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "answer": "located",
+          "explanation": "Use \"located\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b1",
+          "answer": "forward",
+          "explanation": "Use \"forward\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b2",
+          "answer": "increased",
+          "explanation": "Use \"increased\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b3",
+          "answer": "late",
+          "explanation": "Use \"late\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b4",
+          "answer": "passionate",
+          "explanation": "Use \"passionate\" — it matches the grammar and meaning of this sentence."
+        }
+      ],
+      "timerSeconds": 90,
+      "explanation": "Location, anticipation, change, punctuality, and enthusiasm are reviewed in a cultural event context."
+    },
+    {
+      "id": "w-21",
+      "kind": "word",
+      "level": "B2",
+      "word": "rapid",
+      "definition": "Happening in a short time; very fast.",
+      "explanation": "Urban population growth is fast and affects housing.",
+      "examples": [
+        "Urban population growth is fast and affects housing.",
+        "Try using \"rapid\" in a sentence about work, study, or daily life.",
+        "Quick check: \"rapid\" means happening in a short time; very fast."
+      ],
+      "prompt": "The r_ _ _ _ growth of the urban population has led to a housing shortage in many metropolitan areas.",
+      "answer": "rapid"
+    },
+    {
+      "id": "w-22",
+      "kind": "word",
+      "level": "B2",
+      "word": "sustainable",
+      "definition": "Able to continue without harming the environment long term.",
+      "explanation": "Energy sources should replace fossil fuels.",
+      "examples": [
+        "Energy sources should replace fossil fuels.",
+        "Try using \"sustainable\" in a sentence about work, study, or daily life.",
+        "Quick check: \"sustainable\" means able to continue without harming the environment long term."
+      ],
+      "prompt": "Environmentalists advocate for s_ _ _ _ _ _ _ _ _ energy sources to replace fossil fuels.",
+      "answer": "sustainable"
+    },
+    {
+      "id": "w-23",
+      "kind": "word",
+      "level": "B2",
+      "word": "measures",
+      "definition": "Official actions taken to achieve a goal.",
+      "explanation": "The government acted to help the economy.",
+      "examples": [
+        "The government acted to help the economy.",
+        "Try using \"measures\" in a sentence about work, study, or daily life.",
+        "Quick check: \"measures\" means official actions taken to achieve a goal."
+      ],
+      "prompt": "The government implemented new m_ _ _ _ _ _ _ to stimulate the struggling economy.",
+      "answer": "measures"
+    },
+    {
+      "id": "w-24",
+      "kind": "word",
+      "level": "B2",
+      "word": "convincing",
+      "definition": "Persuasive and believable.",
+      "explanation": "His argument changed how people voted.",
+      "examples": [
+        "His argument changed how people voted.",
+        "Try using \"convincing\" in a sentence about work, study, or daily life.",
+        "Quick check: \"convincing\" means persuasive and believable."
+      ],
+      "prompt": "His argument was c_ _ _ _ _ _ _ _ and persuaded most of the committee members to vote in favor.",
+      "answer": "convincing"
+    },
+    {
+      "id": "w-25",
+      "kind": "word",
+      "level": "B2",
+      "word": "advancements",
+      "definition": "Important steps forward; progress.",
+      "explanation": "Technology changed global communication.",
+      "examples": [
+        "Technology changed global communication.",
+        "Try using \"advancements\" in a sentence about work, study, or daily life.",
+        "Quick check: \"advancements\" means important steps forward; progress."
+      ],
+      "prompt": "Technological a_ _ _ _ _ _ _ _ _ _ have significantly transformed the way we communicate globally.",
+      "answer": "advancements"
+    },
+    {
+      "id": "r-5",
+      "kind": "review",
+      "level": "B2",
+      "title": "Review · Words 21–25",
+      "relatedWords": [
+        "rapid",
+        "sustainable",
+        "measures",
+        "convincing",
+        "advancements"
+      ],
+      "paragraphs": [
+        "The r_ _ _ _ growth of the urban population has increased demand for housing. Environmental groups argue that cities need s_ _ _ _ _ _ _ _ _ _ planning to reduce emissions over decades.",
+        "The government introduced new m_ _ _ _ _ _ _ to support small businesses. The minister gave a c_ _ _ _ _ _ _ _ argument for the plan, citing recent technological a_ _ _ _ _ _ _ _ _ _ _ in clean energy."
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "answer": "rapid",
+          "explanation": "Use \"rapid\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b1",
+          "answer": "sustainable",
+          "explanation": "Use \"sustainable\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b2",
+          "answer": "measures",
+          "explanation": "Use \"measures\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b3",
+          "answer": "convincing",
+          "explanation": "Use \"convincing\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b4",
+          "answer": "advancements",
+          "explanation": "Use \"advancements\" — it matches the grammar and meaning of this sentence."
+        }
+      ],
+      "timerSeconds": 90,
+      "explanation": "Urban growth, sustainability, policy, persuasion, and progress vocabulary in a policy context."
+    },
+    {
+      "id": "w-26",
+      "kind": "word",
+      "level": "B2",
+      "word": "maintain",
+      "definition": "To keep something in good condition over time.",
+      "explanation": "Balance between work and life is important.",
+      "examples": [
+        "Balance between work and life is important.",
+        "Try using \"maintain\" in a sentence about work, study, or daily life.",
+        "Quick check: \"maintain\" means to keep something in good condition over time."
+      ],
+      "prompt": "It is essential to m_ _ _ _ _ _ _ a healthy balance between work and personal life.",
+      "answer": "maintain"
+    },
+    {
+      "id": "w-27",
+      "kind": "word",
+      "level": "B2",
+      "word": "indicate",
+      "definition": "To show or suggest something.",
+      "explanation": "Study results point to a clear link.",
+      "examples": [
+        "Study results point to a clear link.",
+        "Try using \"indicate\" in a sentence about work, study, or daily life.",
+        "Quick check: \"indicate\" means to show or suggest something."
+      ],
+      "prompt": "The results of the study i_ _ _ _ _ _ _ that there is a strong correlation between diet and health.",
+      "answer": "indicate"
+    },
+    {
+      "id": "w-28",
+      "kind": "word",
+      "level": "B2",
+      "word": "achieve",
+      "definition": "To succeed in reaching a goal.",
+      "explanation": "The team met its sales targets despite obstacles.",
+      "examples": [
+        "The team met its sales targets despite obstacles.",
+        "Try using \"achieve\" in a sentence about work, study, or daily life.",
+        "Quick check: \"achieve\" means to succeed in reaching a goal."
+      ],
+      "prompt": "Despite the obstacles the team managed to a_ _ _ _ _ _ its annual sales targets.",
+      "answer": "achieve"
+    },
+    {
+      "id": "w-29",
+      "kind": "word",
+      "level": "B2",
+      "word": "impact",
+      "definition": "A strong effect or influence.",
+      "explanation": "AI will change jobs in major ways.",
+      "examples": [
+        "AI will change jobs in major ways.",
+        "Try using \"impact\" in a sentence about work, study, or daily life.",
+        "Quick check: \"impact\" means a strong effect or influence."
+      ],
+      "prompt": "Artificial intelligence is expected to have a profound i_ _ _ _ _ on the future job market.",
+      "answer": "impact"
+    },
+    {
+      "id": "w-30",
+      "kind": "word",
+      "level": "B2",
+      "word": "encourage",
+      "definition": "To give support or confidence to do something.",
+      "explanation": "Teachers should support critical thinking.",
+      "examples": [
+        "Teachers should support critical thinking.",
+        "Try using \"encourage\" in a sentence about work, study, or daily life.",
+        "Quick check: \"encourage\" means to give support or confidence to do something."
+      ],
+      "prompt": "Teachers should e_ _ _ _ _ _ _ _ students to think critically and express their ideas clearly.",
+      "answer": "encourage"
+    },
+    {
+      "id": "r-6",
+      "kind": "review",
+      "level": "B2",
+      "title": "Review · Words 26–30",
+      "relatedWords": [
+        "maintain",
+        "indicate",
+        "achieve",
+        "impact",
+        "encourage"
+      ],
+      "paragraphs": [
+        "It is hard to m_ _ _ _ _ _ _ focus when notifications interrupt you every few minutes. Early results i_ _ _ _ _ _ _ that the new schedule improved sleep quality for most participants.",
+        "The team managed to a_ _ _ _ _ _ its quarterly goals despite supply delays. Experts warn that automation will have a major i_ _ _ _ _ on entry-level roles, so schools should e_ _ _ _ _ _ _ _ students to learn adaptable skills."
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "answer": "maintain",
+          "explanation": "Use \"maintain\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b1",
+          "answer": "indicate",
+          "explanation": "Use \"indicate\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b2",
+          "answer": "achieve",
+          "explanation": "Use \"achieve\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b3",
+          "answer": "impact",
+          "explanation": "Use \"impact\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b4",
+          "answer": "encourage",
+          "explanation": "Use \"encourage\" — it matches the grammar and meaning of this sentence."
+        }
+      ],
+      "timerSeconds": 90,
+      "explanation": "Balance, evidence, success, influence, and motivation appear in workplace and education settings."
+    },
+    {
+      "id": "w-31",
+      "kind": "word",
+      "level": "B2",
+      "word": "scarcity",
+      "definition": "A situation in which there is not enough of something.",
+      "explanation": "Fresh water is limited in dry regions.",
+      "examples": [
+        "Fresh water is limited in dry regions.",
+        "Try using \"scarcity\" in a sentence about work, study, or daily life.",
+        "Quick check: \"scarcity\" means a situation in which there is not enough of something."
+      ],
+      "prompt": "The p_ _ _ _ _ _ _ of fresh water is a growing concern in many arid regions of the world.",
+      "answer": "scarcity"
+    },
+    {
+      "id": "w-32",
+      "kind": "word",
+      "level": "B2",
+      "word": "pursue",
+      "definition": "To follow or work toward a goal over time.",
+      "explanation": "She chose medicine after volunteering.",
+      "examples": [
+        "She chose medicine after volunteering.",
+        "Try using \"pursue\" in a sentence about work, study, or daily life.",
+        "Quick check: \"pursue\" means to follow or work toward a goal over time."
+      ],
+      "prompt": "She decided to p_ _ _ _ _ a career in medicine after volunteering at a local hospital.",
+      "answer": "pursue"
+    },
+    {
+      "id": "w-33",
+      "kind": "word",
+      "level": "B2",
+      "word": "insight",
+      "definition": "A deep and accurate understanding.",
+      "explanation": "The novel reveals life during industrialization.",
+      "examples": [
+        "The novel reveals life during industrialization.",
+        "Try using \"insight\" in a sentence about work, study, or daily life.",
+        "Quick check: \"insight\" means a deep and accurate understanding."
+      ],
+      "prompt": "The novel provides an i_ _ _ _ _ _ into the lives of people living during the Industrial Revolution.",
+      "answer": "insight"
+    },
+    {
+      "id": "w-34",
+      "kind": "word",
+      "level": "B2",
+      "word": "conducting",
+      "definition": "Carrying out or organizing (research).",
+      "explanation": "Researchers are running experiments.",
+      "examples": [
+        "Researchers are running experiments.",
+        "Try using \"conducting\" in a sentence about work, study, or daily life.",
+        "Quick check: \"conducting\" means carrying out or organizing (research)."
+      ],
+      "prompt": "Researchers are c_ _ _ _ _ _ _ _ _ experiments to find a cure for the rare disease.",
+      "answer": "conducting"
+    },
+    {
+      "id": "w-35",
+      "kind": "word",
+      "level": "B2",
+      "word": "largely",
+      "definition": "Mostly; for the most part.",
+      "explanation": "Marketing strategies explain much of the success.",
+      "examples": [
+        "Marketing strategies explain much of the success.",
+        "Try using \"largely\" in a sentence about work, study, or daily life.",
+        "Quick check: \"largely\" means mostly; for the most part."
+      ],
+      "prompt": "The company's success is l_ _ _ _ _ _ attributed to its innovative marketing strategies.",
+      "answer": "largely"
+    },
+    {
+      "id": "r-7",
+      "kind": "review",
+      "level": "B2",
+      "title": "Review · Words 31–35",
+      "relatedWords": [
+        "scarcity",
+        "pursue",
+        "insight",
+        "conducting",
+        "largely"
+      ],
+      "paragraphs": [
+        "Water s_ _ _ _ _ _ _ in dry regions makes irrigation costly for farmers. After volunteering abroad, she decided to p_ _ _ _ _ a career in public health.",
+        "The biography offers deep i_ _ _ _ _ _ into how the company was founded. Researchers are c_ _ _ _ _ _ _ _ _ a trial that is l_ _ _ _ _ funded by international grants."
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "answer": "scarcity",
+          "explanation": "Use \"scarcity\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b1",
+          "answer": "pursue",
+          "explanation": "Use \"pursue\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b2",
+          "answer": "insight",
+          "explanation": "Use \"insight\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b3",
+          "answer": "conducting",
+          "explanation": "Use \"conducting\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b4",
+          "answer": "largely",
+          "explanation": "Use \"largely\" — it matches the grammar and meaning of this sentence."
+        }
+      ],
+      "timerSeconds": 90,
+      "explanation": "Shortage, ambition, understanding, research activity, and degree adverbs are reviewed together."
+    },
+    {
+      "id": "w-36",
+      "kind": "word",
+      "level": "B2",
+      "word": "evaluate",
+      "definition": "To judge or assess carefully.",
+      "explanation": "Investors should study risks first.",
+      "examples": [
+        "Investors should study risks first.",
+        "Try using \"evaluate\" in a sentence about work, study, or daily life.",
+        "Quick check: \"evaluate\" means to judge or assess carefully."
+      ],
+      "prompt": "It is crucial to a_ _ _ _ _ _ _ the potential risks before investing in the stock market.",
+      "answer": "evaluate"
+    },
+    {
+      "id": "w-37",
+      "kind": "word",
+      "level": "B2",
+      "word": "blend",
+      "definition": "A mixture of different elements.",
+      "explanation": "The building mixes modern and traditional design.",
+      "examples": [
+        "The building mixes modern and traditional design.",
+        "Try using \"blend\" in a sentence about work, study, or daily life.",
+        "Quick check: \"blend\" means a mixture of different elements."
+      ],
+      "prompt": "The architecture of the building is a perfect b_ _ _ _ of modern and traditional styles.",
+      "answer": "blend"
+    },
+    {
+      "id": "w-38",
+      "kind": "word",
+      "level": "B2",
+      "word": "foster",
+      "definition": "To encourage the development of something.",
+      "explanation": "The conference promotes international cooperation.",
+      "examples": [
+        "The conference promotes international cooperation.",
+        "Try using \"foster\" in a sentence about work, study, or daily life.",
+        "Quick check: \"foster\" means to encourage the development of something."
+      ],
+      "prompt": "The conference aims to f_ _ _ _ _ collaboration between scientists from different countries.",
+      "answer": "foster"
+    },
+    {
+      "id": "w-39",
+      "kind": "word",
+      "level": "B2",
+      "word": "exchange",
+      "definition": "The act of giving and receiving; cultural trade.",
+      "explanation": "Globalization increases cultural contact.",
+      "examples": [
+        "Globalization increases cultural contact.",
+        "Try using \"exchange\" in a sentence about work, study, or daily life.",
+        "Quick check: \"exchange\" means the act of giving and receiving; cultural trade."
+      ],
+      "prompt": "Globalization has led to increased cultural e_ _ _ _ _ _ _ and economic interdependence.",
+      "answer": "exchange"
+    },
+    {
+      "id": "w-40",
+      "kind": "word",
+      "level": "B2",
+      "word": "ensure",
+      "definition": "To make certain that something happens.",
+      "explanation": "Laws protect privacy rights.",
+      "examples": [
+        "Laws protect privacy rights.",
+        "Try using \"ensure\" in a sentence about work, study, or daily life.",
+        "Quick check: \"ensure\" means to make certain that something happens."
+      ],
+      "prompt": "The laws were updated to e_ _ _ _ _ the protection of individual privacy rights.",
+      "answer": "ensure"
+    },
+    {
+      "id": "r-8",
+      "kind": "review",
+      "level": "B2",
+      "title": "Review · Words 36–40",
+      "relatedWords": [
+        "evaluate",
+        "blend",
+        "foster",
+        "exchange",
+        "ensure"
+      ],
+      "paragraphs": [
+        "Before signing the contract, investors should e_ _ _ _ _ _ _ the risks carefully. The café interior is a thoughtful b_ _ _ _ of industrial and cozy design.",
+        "The program aims to f_ _ _ _ _ collaboration between universities. Global trade has increased cultural e_ _ _ _ _ _ _ , and new rules e_ _ _ _ _ fair competition in the market."
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "answer": "evaluate",
+          "explanation": "Use \"evaluate\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b1",
+          "answer": "blend",
+          "explanation": "Use \"blend\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b2",
+          "answer": "foster",
+          "explanation": "Use \"foster\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b3",
+          "answer": "exchange",
+          "explanation": "Use \"exchange\" — it matches the grammar and meaning of this sentence."
+        },
+        {
+          "id": "b4",
+          "answer": "ensure",
+          "explanation": "Use \"ensure\" — it matches the grammar and meaning of this sentence."
+        }
+      ],
+      "timerSeconds": 90,
+      "explanation": "Assessment, mixture, support, trade, and certainty vocabulary close the B2 word set."
+    }
+  ]
+}
