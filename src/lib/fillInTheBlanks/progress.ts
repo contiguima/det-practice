@@ -53,3 +53,7 @@ export function getCurrentUnitIndex(path: LearnUnit[], progress: FitbLearnProgre
   }
   return path.length;
 }
+
+export function isUnitComplete(progress: FitbLearnProgress, unitId: string): boolean {
+  return progress.completedUnitIds.includes(unitId);
+}

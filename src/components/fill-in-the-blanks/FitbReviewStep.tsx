@@ -15,9 +15,14 @@ function formatTimer(seconds: number) {
 export function FitbReviewStep({
   exercise,
   onComplete,
+  onRetry,
+  continueLabel = "Continuar",
 }: {
   exercise: FitbReviewExercise;
   onComplete: (score: number, maxScore: number, timedOut: boolean) => void;
+  /** Si se omite, no se muestra el botón de reintentar. */
+  onRetry?: () => void;
+  continueLabel?: string;
 }) {
   const [values, setValues] = useState<string[]>(() => exercise.blanks.map(() => ""));
   const [started, setStarted] = useState(false);
@@ -165,13 +170,27 @@ export function FitbReviewStep({
               </p>
             )}
           </div>
-          <button
-            type="button"
-            onClick={handleContinue}
-            className="w-full rounded-xl bg-[color:var(--brand)] px-4 py-3 text-sm font-semibold text-white transition hover:opacity-95"
-          >
-            Continuar
-          </button>
+          <div className={onRetry ? "flex flex-col gap-2 sm:flex-row" : ""}>
+            {onRetry ? (
+              <button
+                type="button"
+                onClick={onRetry}
+                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-800 transition hover:bg-neutral-50 sm:flex-1"
+              >
+                Reintentar evaluación
+              </button>
+            ) : null}
+            <button
+              type="button"
+              onClick={handleContinue}
+              className={[
+                "w-full rounded-xl bg-[color:var(--brand)] px-4 py-3 text-sm font-semibold text-white transition hover:opacity-95",
+                onRetry ? "sm:flex-1" : "",
+              ].join(" ")}
+            >
+              {continueLabel}
+            </button>
+          </div>
         </div>
       ) : null}
     </div>
